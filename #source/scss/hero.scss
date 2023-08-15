@@ -1,0 +1,134 @@
+.hero{
+    background-image: url('../../img/hero/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+}
+.hero__wrapper{
+    max-width: 780px;
+}
+.hero__title{
+    margin-top: -1px;
+    margin-left: -1px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 117%;
+    text-transform: uppercase;
+    color: #000000;
+    span{
+        color: #3E9CDC;
+    }
+}
+.hero__text{
+    margin-top: 90px;
+    color:#000000;
+    font-size: 20px;
+}
+.hero__text-title{
+    font-weight: 700;
+}
+.hero__text-list{
+    margin-top: 9px;
+}
+.hero__text-item{
+    padding-left: 25px;
+    line-height: 140%;
+    font-weight: 400;
+    position: relative;
+
+    &:before{
+        content: '';
+        display: block;
+        width: 5px;
+        height: 1.15px;
+        background-color: #000;
+
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+@media (max-width:960px) {
+    .hero{
+        padding: 150px 0 70px;
+    }
+    .hero__title{
+        font-size: 35px;
+    }
+    .hero__text{
+        margin-top: 40px;
+        font-size: 18px;
+    }
+}
+.hero__buttons{
+    margin-top: 79px;
+    display: flex;
+    max-width: 396px;
+    justify-content: space-between;
+
+    font-size: 13px;
+    color: #2A2B30;
+    text-transform: uppercase;
+}
+@media (max-width:694px) {
+    .hero__title{
+        font-size: 24px;
+    }
+    .hero__text{
+        margin-top: 40px;
+        font-size: 15px;
+    }
+    .hero__buttons{
+        margin-top: 40px;
+    }
+}
+.hero__button{
+    width: 183px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #3E9CDC;
+    border-radius: 5px;
+    background-color: #fff;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    &:hover{
+        background-color: #3E9CDC;
+        color: #fff;
+    }
+
+    span{
+        //letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+}
+
+@media (max-width:500px) {
+    .hero{
+        padding: 150px 0 30px;
+        background-position: 40% center;
+    }
+    .hero__title{
+        font-size: 18px;
+    }
+    .hero__text{
+        margin-top: 40px;
+        font-size: 14px;
+    }
+    .hero__buttons{
+        max-width: 230px;
+    }
+    .hero__button{
+        width: 100px;
+        height: 30px;
+        span{
+            font-weight: 400;
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,177 @@
+.footer{
+    padding: 28px 0;
+    background-color: #3D4050;
+}
+.footer__flex{
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
+
+    &>*:not(:last-child){
+        border-right: 1px solid #C3C3C3;
+    }
+}
+.footer__desc{ 
+    flex: 1 1;
+    max-width: 346px;
+    padding-right: 5px;
+
+    @media(max-width:1025px) {
+        font-size: 12px;
+    }
+}
+.pay-list{
+    flex: 1 1;
+    max-width: 474px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+    color:#C3C3C3;
+    margin: 0 -5px;
+}
+.pay-list__item{
+    padding: 0 5px;
+    span{
+        white-space: nowrap;
+        padding-left: 30px;
+        position: relative;
+        &:after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }   
+    }
+
+    &--qiwi{
+        span{
+            &:after{
+                background-image: url('../../img/footer/qiwi.svg');
+            }   
+        }
+    }
+
+    &--yandex{
+        span{
+            &:after{
+                background-image: url('../../img/footer/yandex.svg');
+            }   
+        }
+    }
+
+    &--webmoney{
+        span{
+            &:after{
+                background-image: url('../../img/footer/webmoney.svg');
+            }   
+        }
+    }
+}
+.contacts-list{
+    flex: 1 1;
+    max-width: 344px;
+    padding-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+
+    margin: 0 -5px;
+}
+.contacts-list__item{
+    padding: 0 5px;
+    a{
+        white-space: nowrap;
+        color: #fff;
+
+        padding-left: 30px;
+        position: relative;
+        transition: all 0.2s ease-in;
+        &:hover{
+            color:#43ABF0;
+        }
+        &:after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }  
+    }
+
+    &--email{
+        a{
+            &:after{
+                background-image: url('../../img/footer/email.svg');
+            }   
+        }
+    }
+
+    &--vk{
+        a{
+            &:after{
+                background-image: url('../../img/footer/vk.svg');
+            }   
+        }
+    }
+}
+
+@media(max-width:1000px) {
+    .footer__flex{
+        flex-direction: column;
+        justify-content: center;
+        &>*:not(:last-child){
+            border-right: unset;
+            margin-bottom: 5px;
+        }
+    }
+    .contacts-list{
+        padding-left: unset;
+    }
+}
+
+@media(max-width:500px) {
+    .footer__flex{
+        font-size: 10px;
+    }
+    .contacts-list{
+        padding-left: unset;
+    }
+    .footer__desc{
+        font-size: 10px;
+    }
+    .pay-list__item{
+        span{
+            padding-left: 20px;
+            &:after{
+                width: 15px;
+                height: 15px;
+            }  
+        }
+    }
+    .contacts-list__item{
+        a{
+            padding-left: 20px;
+            &:after{
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}
